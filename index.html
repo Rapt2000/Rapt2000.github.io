@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050b0b">
+  <meta name="description" content="集成战略群友赛#5「沉沦者的黑流树海」赛事宣传页、7×10 赛程与选手算分器。">
+  <title>集成战略群友赛 #5 · 沉沦者的黑流树海</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <img class="ambient__image" src="assets/background.jpg" alt="">
+    <div class="ambient__veil"></div>
+    <div class="ambient__grid"></div>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#rules" data-page-link="rules" aria-label="返回赛事说明">
+      <span class="brand__mark">05</span>
+      <span class="brand__text">
+        <b>集成战略群友赛</b>
+        <small>THE BLACK FLOW CUP</small>
+      </span>
+    </a>
+
+    <nav class="main-nav" aria-label="页面导航">
+      <button class="nav-item is-active" type="button" data-page="rules">
+        <span>01</span>赛事说明
+      </button>
+      <button class="nav-item" type="button" data-page="rules-detail">
+        <span>02</span>比赛规则
+      </button>
+      <button class="nav-item" type="button" data-page="schedule">
+        <span>03</span>比赛赛程
+      </button>
+      <button class="nav-item" type="button" data-page="calculator">
+        <span>04</span>记分计算器
+      </button>
+    </nav>
+
+    <div class="save-state" id="saveState" title="所有算分数据仅保存在当前浏览器">
+      <i></i>
+      <span id="saveText">本地自动保存</span>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================================================
+         01 / 赛事说明
+    ============================================================= -->
+    <section class="page is-active" id="page-rules" data-page-panel="rules">
+      <div class="shell">
+        <div class="hero">
+          <div class="hero__copy">
+            <p class="eyebrow"><span></span> ARKNIGHTS · INTEGRATED STRATEGIES #05</p>
+            <h1>
+              <span class="hero__cup">集成战略群友赛</span>
+              <em class="hero__number">#5</em>
+            </h1>
+            <h2 class="hero__theme">沉沦者的黑流树海</h2>
+            <p class="hero__en">THE BLACK FLOW OF THE DROWNING SEEKERS</p>
+            <p class="hero__lead">
+              黑流之下，树海之中，埋藏着不止一个秘密。<br>
+              十席竞逐，一次不能回头的下潜。
+            </p>
+            <div class="hero__actions">
+              <button class="button button--primary" type="button" data-page="schedule">
+                查看比赛赛程
+                <span aria-hidden="true">↗</span>
+              </button>
+              <button class="button button--ghost" type="button" data-page="calculator">
+                打开记分计算器
+              </button>
+            </div>
+            <div class="hero__meta" aria-label="赛事概览">
+              <div><small>FORMAT</small><b>个人赛</b></div>
+              <div><small>PLAYERS</small><b>10 席</b></div>
+              <div><small>PRIZE</small><b>4 档奖励</b></div>
+            </div>
+          </div>
+
+          <div class="hero__visual" aria-hidden="true">
+            <div class="orbit orbit--outer"></div>
+            <div class="orbit orbit--inner"></div>
+            <div class="visual__index">05</div>
+            <div class="visual__label">BLACK<br>FLOW<br><span>DROWNING<br>SEEKERS</span></div>
+            <div class="visual__tick visual__tick--one"></div>
+            <div class="visual__tick visual__tick--two"></div>
+            <div class="visual__coordinate">31°14′N<br>121°29′E</div>
+          </div>
+        </div>
+
+        <div class="section-heading">
+          <div>
+            <span class="section-heading__index">01</span>
+            <p class="section-heading__eyebrow">EVENT BRIEFING</p>
+            <h2>比赛说明与规则</h2>
+          </div>
+          <p class="section-heading__note">请选手在开赛前完整阅读；规则解释权归主办方所有。</p>
+        </div>
+
+        <div class="rules-layout">
+          <div class="rules-main">
+            <article class="panel rule-intro">
+              <div class="rule-intro__head">
+                <span class="rule-tag">1.1 / 比赛主题</span>
+                <span class="status-chip">IS5</span>
+              </div>
+              <h3>「沉沦者的黑流树海」</h3>
+              <p>
+                本次比赛以集成战略 #05「沉沦者的黑流树海」为比赛主题。选手在指定比赛时间内完成一局完整探索，
+                并由主办方依据统一记分规则核算最终得分。
+              </p>
+              <div class="quote-line">
+                <span aria-hidden="true">“</span>
+                <p>保持清醒，否则你也将永远成为其中一员。</p>
+              </div>
+            </article>
+
+            <article class="panel">
+              <div class="panel__head">
+                <span class="rule-tag">1.2 / 比赛方式</span>
+              </div>
+              <ol class="rule-list">
+                <li>
+                  <span class="rule-list__num">01</span>
+                  <p>使用<strong>腾讯会议 / Bilibili 直播</strong>比赛。</p>
+                </li>
+                <li>
+                  <span class="rule-list__num">02</span>
+                  <div>
+                    <p>
+                      如因特殊情况无法直播比赛，经与主办方协商后，可在指定时间段内开局完成一局游戏
+                      <strong>（不得中断）</strong>，提交完整游戏录像和森空岛记录截图
+                      <strong>（如有重开需要提供重开前录像）</strong>。
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <span class="rule-list__num">03</span>
+                  <p>比赛开展初心为展示、交流和学习打法，直播比赛期间<strong>不作连麦限制</strong>。</p>
+                </li>
+              </ol>
+            </article>
+
+            <article class="panel">
+              <div class="panel__head panel__head--split">
+                <div>
+                  <span class="rule-tag">1.3 / 比赛赛制</span>
+                  <h3>个人赛</h3>
+                </div>
+                <div class="format-seal" aria-hidden="true">
+                  <span>SOLO</span>
+                  <b>01</b>
+                </div>
+              </div>
+              <p class="muted">
+                每位选手独立完成一局探索，以最终核算得分为唯一排名依据。得分相同则并列排名。
+              </p>
+            </article>
+          </div>
+
+          <aside class="rules-aside">
+            <article class="panel reward-panel">
+              <div class="panel__head">
+                <span class="rule-tag">1.4 / 比赛奖励</span>
+              </div>
+              <div class="reward-list">
+                <div class="reward reward--first">
+                  <span class="reward__place">第一名</span>
+                  <strong><small>¥</small>98</strong>
+                  <span class="reward__line"></span>
+                </div>
+                <div class="reward reward--second">
+                  <span class="reward__place">第二名</span>
+                  <strong><small>¥</small>68</strong>
+                  <span class="reward__line"></span>
+                </div>
+                <div class="reward reward--third">
+                  <span class="reward__place">第三名</span>
+                  <strong><small>¥</small>30</strong>
+                  <span class="reward__line"></span>
+                </div>
+                <div class="reward reward--rest">
+                  <span class="reward__place">第四至第十名</span>
+                  <strong><small>每人 ¥</small>15</strong>
+                  <span class="reward__line"></span>
+                </div>
+              </div>
+              <p class="panel-footnote">奖励按最终排名发放，共十个奖励席位。</p>
+            </article>
+
+            <article class="panel quick-notes">
+              <span class="rule-tag">参赛提示</span>
+              <ul>
+                <li><span>01</span>提前测试会议、直播与录屏设备。</li>
+                <li><span>02</span>开局后不得中断，重开须保留录像。</li>
+                <li><span>03</span>赛后由主办方统一核对算分明细。</li>
+              </ul>
+              <button class="text-link" type="button" data-page="calculator">
+                前往填写本局算分 <span aria-hidden="true">→</span>
+              </button>
+            </article>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         02 / 比赛规则（预留）
+    ============================================================= -->
+    <section class="page" id="page-rules-detail" data-page-panel="rules-detail">
+      <div class="shell">
+        <div class="section-heading section-heading--page">
+          <div>
+            <span class="section-heading__index">02</span>
+            <p class="section-heading__eyebrow">RULES &amp; REGULATIONS</p>
+            <h2>比赛规则</h2>
+          </div>
+          <p class="section-heading__note">该页面暂空预留，待主办方补充完整规则内容。</p>
+        </div>
+
+        <div class="placeholder-panel panel">
+          <div class="placeholder-panel__deco" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="placeholder-panel__body">
+            <span class="placeholder-kicker">RESERVED · 02</span>
+            <span class="placeholder-stamp">待补充</span>
+            <h3>比赛规则内容预留</h3>
+            <p>
+              本页面为《集成战略群友赛 #5》的比赛规则预留页。<br>
+              完整规则、判定细则与提交要求将在主办方确认后更新至此。
+            </p>
+            <div class="placeholder-lines" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         03 / 比赛赛程
+    ============================================================= -->
+    <section class="page" id="page-schedule" data-page-panel="schedule">
+      <div class="shell shell--wide">
+        <div class="section-heading section-heading--page">
+          <div>
+            <span class="section-heading__index">03</span>
+            <p class="section-heading__eyebrow">MATCH SCHEDULE</p>
+            <h2>比赛赛程</h2>
+          </div>
+          <p class="section-heading__note">
+            7 列 × 10 席 · 按选手最终得分降序排列 · 与记分计算器实时联动
+          </p>
+        </div>
+
+        <div class="schedule-summary">
+          <div class="summary-item">
+            <span class="summary-item__pulse"></span>
+            <div><small>已登记选手</small><b id="registeredCount">0 / 10</b></div>
+          </div>
+          <div class="summary-item">
+            <div><small>已产生得分</small><b id="scoredCount">0 人</b></div>
+          </div>
+          <div class="summary-item">
+            <div><small>数据状态</small><b id="scheduleUpdated">等待录入</b></div>
+          </div>
+          <p class="schedule-summary__hint">
+            名次由算分器自动生成。点击选手昵称可直接进入对应算分页面。
+          </p>
+        </div>
+
+        <div class="table-panel">
+          <div class="schedule-table__scroll">
+            <table class="schedule-table">
+              <caption class="sr-only">集成战略群友赛第五赛季比赛赛程，共十行七列</caption>
+              <colgroup>
+                <col class="col-player">
+                <col class="col-date">
+                <col class="col-difficulty">
+                <col class="col-squad">
+                <col class="col-operator">
+                <col class="col-score">
+                <col class="col-rank">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">选手昵称</th>
+                  <th scope="col">比赛日期</th>
+                  <th scope="col">比赛难度</th>
+                  <th scope="col">开局分队</th>
+                  <th scope="col">开局六星干员</th>
+                  <th scope="col" class="cell-score">选手得分</th>
+                  <th scope="col" class="cell-rank">比赛排名</th>
+                </tr>
+              </thead>
+              <tbody id="scheduleBody"></tbody>
+            </table>
+          </div>
+          <div class="table-legend">
+            <span><i class="legend-dot legend-dot--gold"></i>前三名</span>
+            <span><i class="legend-dot"></i>得分来自「记分计算器」第 06 部分</span>
+            <span class="table-legend__right">共 10 席 · 7 列数据</span>
+          </div>
+        </div>
+
+        <div class="schedule-foot">
+          <p>
+            <strong>排名规则</strong>
+            按选手最终得分降序排列；得分精确到小数点后两位，同分并列。
+          </p>
+          <button class="button button--ghost button--small" type="button" data-page="calculator">
+            去录入成绩 <span aria-hidden="true">↗</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         04 / 记分计算器
+    ============================================================= -->
+    <section class="page" id="page-calculator" data-page-panel="calculator">
+      <div class="shell shell--wide">
+        <div class="section-heading section-heading--page calculator-heading">
+          <div>
+            <span class="section-heading__index">04</span>
+            <p class="section-heading__eyebrow">SCORE CALCULATOR</p>
+            <h2>记分计算器</h2>
+          </div>
+          <div class="calculator-heading__tools">
+            <p class="section-heading__note">所有改动即时保存至本机浏览器，无需手动提交。</p>
+            <label class="player-count" for="playerCount">
+              <span>参赛人数</span>
+              <select id="playerCount" aria-label="选择参赛人数">
+                <option value="1">1 人</option>
+                <option value="2">2 人</option>
+                <option value="3">3 人</option>
+                <option value="4">4 人</option>
+                <option value="5">5 人</option>
+                <option value="6">6 人</option>
+                <option value="7">7 人</option>
+                <option value="8">8 人</option>
+                <option value="9">9 人</option>
+                <option value="10" selected>10 人</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="calc-shell">
+          <aside class="player-rail">
+            <div class="player-rail__head">
+              <span>选手页面</span>
+              <small id="playerCountLabel">10 PAGES</small>
+            </div>
+            <div class="player-tabs" id="playerTabs" role="tablist" aria-label="选手算分页面"></div>
+            <div class="player-rail__foot">
+              <div class="rail-note">
+                <b>分队系数按赛事规则固定</b>
+                <p>数据仅保存在当前浏览器，请勿清理站点数据。</p>
+              </div>
+            </div>
+          </aside>
+
+          <div class="calc-content">
+            <div class="score-dock" id="scoreDock">
+              <div class="score-dock__identity">
+                <span class="score-dock__index" id="dockIndex">PLAYER 01</span>
+                <b id="dockName">未登记昵称</b>
+                <small id="dockStatus">正在编辑第 1 位选手</small>
+              </div>
+              <div class="score-dock__metrics">
+                <div><span>关卡</span><b data-score-part="stage">0</b></div>
+                <div><span>干员</span><b data-score-part="operator">0</b></div>
+                <div><span>其他</span><b data-score-part="other">0</b></div>
+                <div><span>结算</span><b data-score-part="settlement">0</b></div>
+              </div>
+              <div class="score-dock__total">
+                <span>选手得分</span>
+                <strong id="dockTotal">0</strong>
+                <small id="dockCoefficients">难度系数 × 分队系数</small>
+              </div>
+            </div>
+
+            <div id="calculatorMount"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell shell--wide">
+      <p><b>集成战略群友赛 #5</b> · 沉沦者的黑流树海</p>
+      <p>赛事页面 / 算分系统 · 数据保存在本机</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
